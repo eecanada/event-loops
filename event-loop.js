@@ -3,6 +3,9 @@ const crypto = require('crypto')
 
 const start = Date.now()
 
+//how to change threadpool
+process.env.UV_THREADPOOL_SIZE=3
+
 setTimeout(()=>{
   console.log('timer 1 finished')
 },0)
