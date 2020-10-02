@@ -13,18 +13,24 @@ server.on('request', (req,res)=>{
   // })
 
   // Solution 2 - streams, read chunk by chunk
-  const readable = fs.createReadStream('./test-filee.txt')
-  readable.on('data', (chunk)=>{
-    res.write(chunk)
-  })
-  readable.on('end', ()=>{
-    res.end()
-  })
-  readable.on('error', err =>{
-    console.log(err)
-    res.statusCode = 500
-    res.end('file not found')
-  })
+  // const readable = fs.createReadStream('./test-filee.txt')
+  // readable.on('data', (chunk)=>{
+  //   res.write(chunk)
+  // })
+  // readable.on('end', ()=>{
+  //   res.end()
+  // })
+  // readable.on('error', err =>{
+  //   console.log(err)
+  //   res.statusCode = 500
+  //   res.end('file not found')
+  // })
+
+    // Solution 3 - pipe
+    const readable = fs.createReadStream('test-file.txt')
+    readable.pipe(res)
+    //reableSource.pipe(writeable Destination, aka client)
+ 
 }) 
 
 
