@@ -1,0 +1,23 @@
+{
+  "name": "event-loops",
+  "version": "1.0.0",
+  "description": "",
+  "main": "event-loop.js",
+  "dependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eecanada/event-loops.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eecanada/event-loops/issues"
+  },
+  "homepage": "https://github.com/eecanada/event-loops#readme"
+}
